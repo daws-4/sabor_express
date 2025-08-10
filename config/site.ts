@@ -1,9 +1,9 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Miche Claro",
+  name: "Sabor Express",
   description:
-    "La mejor alternativa para comprar y vender alcohol online en Venezuela.",
+    "La mejor alternativa para comprar y vender comida online en Venezuela.",
   navItems: [
     {
       label: "Inicio",

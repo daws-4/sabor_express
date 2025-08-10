@@ -178,8 +178,14 @@ Este proyecto tiene como objetivo crear una **aplicación multiplataforma** que 
 La plataforma está compuesta por **cinco interfaces principales**, cada una diseñada para cubrir necesidades específicas de los distintos tipos de usuarios:
 
 ---
+ 
 
-### 1. **Web Master**
+
+
+ PARTE DE TULIO
+
+
+### 1. **Web Master**   
 
 **Propósito:**  
 Administrar y supervisar toda la operación de la plataforma a nivel nacional y regional.
@@ -215,6 +221,8 @@ Permitir a los vendedores gestionar su tienda, productos y ventas.
 - **Transacción p2p:** Solicitud, aceptación y confirmación de pagos entre comprador y vendedor, con cierre automático del pedido y asignación de delivery.
 
 ---
+
+PARTE DE ROY
 
 ### 3. **Mobile Seller**
 

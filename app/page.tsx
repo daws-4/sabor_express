@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 import { GooglePlayIcon, AppStoreIcon } from "@/components/icons";
 
+// Componente para animar el contador de vendedores/restaurantes
 function Counter({ to }: { to: number }) {
   const [count, setCount] = useState(0);
 
@@ -15,9 +16,9 @@ function Counter({ to }: { to: number }) {
 
     if (start === end) return;
 
-    const step = 10; // Contar de 10 en 10
+    const step = 10;
     const steps = Math.ceil(end / step);
-    const totalMilSecDur = 4000; // 4 segundos
+    const totalMilSecDur = 4000;
     const incrementTime = Math.max(10, Math.floor(totalMilSecDur / steps));
 
     let timer = setInterval(() => {
@@ -35,6 +36,8 @@ function Counter({ to }: { to: number }) {
 
   return <span>{count}</span>;
 }
+
+// Componente para animar el contador de usuarios
 function CounterUser({ to }: { to: number }) {
   const [count, setCount] = useState(0);
 
@@ -44,9 +47,9 @@ function CounterUser({ to }: { to: number }) {
 
     if (start === end) return;
 
-    const step = 10; // Contar de 10 en 10
+    const step = 10;
     const steps = Math.ceil(end / step);
-    const totalMilSecDur = 4000; // 4 segundos
+    const totalMilSecDur = 4000;
     const incrementTime = Math.max(10, Math.floor(totalMilSecDur / steps));
 
     let timer = setInterval(() => {
@@ -77,12 +80,13 @@ export default function Home() {
       <header className="bg-[#003f63] text-white">
         <div className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
           <div className="flex items-center space-x-3">
+            {/* Asegúrate de tener un logo para Sabor Express en la ruta especificada */}
             <img
-              alt="Miche Claro Logo"
-              className="h-14 w-14 shadow-lg shadow-black"
-              src="/logo/logo_micheclaro.png"
+              alt="Sabor Express Logo"
+              className="h-14 w-14 shadow-lg shadow-black rounded-full"
+              src="/logo/logo_saborexpress.png"
             />
-            <span className="text-xl font-bold">Miche Claro</span>
+            <span className="text-xl font-bold">Sabor Express</span>
           </div>
           <nav className="hidden md:flex space-x-6">
             <Link className="hover:text-yellow-300 font-medium" href="/pricing">
@@ -107,7 +111,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.6 }}
           >
-            Miche Claro 🍻
+            Sabor Express 🍔
           </motion.h1>
           <motion.p
             animate={{ opacity: 1 }}
@@ -115,8 +119,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            La app para vender y comprar alcohol desde tu celular... ¡y jugar
-            mientras tomas! Perfecta para bodegas y amantes del alcohol.
+            La app para descubrir y pedir comida desde tu celular. Perfecta para restaurantes y amantes de la buena comida.
           </motion.p>
           <motion.div
             animate={{ opacity: 1, y: 0 }}
@@ -157,7 +160,7 @@ export default function Home() {
             Nuestra comunidad
           </h2>
           <p className="text-lg text-[#403d39] mb-8">
-            Gracias por confiar en Miche Claro 🍻
+            Gracias por confiar en Sabor Express 🍔
           </p>
 
           {stats && (
@@ -170,7 +173,7 @@ export default function Home() {
               >
                 <Counter to={stats.sellers} />
                 <span className="block text-lg mt-2 font-normal text-[#403d39]">
-                  Vendedores registrados
+                  Restaurantes afiliados
                 </span>
               </motion.div>
               <motion.div
@@ -181,7 +184,7 @@ export default function Home() {
               >
                 <CounterUser to={stats.users} />
                 <span className="block text-lg mt-2 font-normal text-[#403d39]">
-                  Usuarios activos
+                  Amantes de la comida
                 </span>
               </motion.div>
             </div>
@@ -189,21 +192,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BENEFICIOS PARA BODEGAS */}
+      {/* BENEFICIOS PARA RESTAURANTES */}
       <section className="py-16 px-6 bg-[#f3f1e6] text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-[#285c3c] mb-6">
-            ¿Tienes una bodega?
+            ¿Tienes un restaurante?
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-[#403d39] mb-6">
-            Miche Claro te conecta con más clientes, aumenta tus ventas y
-            digitaliza tu negocio. Recibe pedidos online y gestiona tu catálogo
+            Sabor Express te conecta con más clientes, aumenta tus ventas y
+            digitaliza tu negocio. Recibe pedidos online y gestiona tu menú
             desde cualquier lugar.
           </p>
+          {/* Reemplaza esta imagen por una relevante para restaurantes */}
           <img
-            alt="Bodegas"
+            alt="Restaurante usando la app Sabor Express"
             className="mx-auto w-full max-w-[600px] h-[400px] object-cover rounded"
-            src="/bodegas-beneficio.jpg"
+            src="/restaurantes-beneficio.jpg"
           />
         </div>
       </section>
@@ -212,16 +216,16 @@ export default function Home() {
       <section className="py-16 px-6 bg-[#e3d9c6] text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-[#003f63] mb-6">
-            ¿Te gusta beber con estilo?
+            ¿Te gusta comer con estilo?
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-[#403d39] mb-6">
-            Compra tus bebidas favoritas sin salir de casa y diviértete con
-            nuestros juegos diseñados para animar tu noche.
+            Pide tus platos favoritos sin salir de casa y descubre las mejores recomendaciones para cada ocasión.
           </p>
+          {/* Reemplaza esta imagen por una de gente disfrutando comida */}
           <img
-            alt="Consumidores"
+            alt="Personas disfrutando de comida pedida por Sabor Express"
             className="mx-auto w-full max-w-[600px] h-[400px] object-cover rounded"
-            src="/consumidores-juegos.jpg"
+            src="/comensales-disfrutando.jpg"
           />
         </div>
       </section>
@@ -236,21 +240,21 @@ export default function Home() {
             <Card>
               <CardBody className="bg-[#e3d9c6] p-6 rounded-xl shadow">
                 {
-                  '"Desde que uso Miche Claro, mis ventas han aumentado un 40%. ¡Una maravilla para mi bodega!"'
+                  '"Desde que uso Sabor Express, mis ventas han aumentado un 40%. ¡Una maravilla para mi restaurante!"'
                 }
               </CardBody>
               <CardFooter className="mt-4 text-sm text-gray-600">
-                — Juan, dueño de bodega
+                — Juan, dueño de restaurante
               </CardFooter>
             </Card>
             <Card>
               <CardBody className="bg-[#e3d9c6] p-6 rounded-xl shadow">
                 {
-                  ' "La compré por la cerveza, me quedé por los juegos. ¡La mejor app para beber!"'
+                  ' "La descargué por la variedad, me quedé por la rapidez. ¡La mejor app para pedir comida!"'
                 }
               </CardBody>
               <CardFooter className="mt-4 text-sm text-gray-600">
-                — Carla, usuaria
+                — Carla, comensal
               </CardFooter>
             </Card>
           </div>
@@ -261,10 +265,10 @@ export default function Home() {
       <section className="py-20 px-6 bg-[#f9e27b] text-center" id="registro">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-[#003f63] mb-4">
-            ¿Eres dueño de una bodega?
+            ¿Eres dueño de un restaurante?
           </h2>
           <p className="mb-6 text-lg text-[#403d39]">
-            Si estás interesado en implementar Miche Claro en tu negocio,
+            Si estás interesado en afiliar tu restaurante a Sabor Express,
             regístrate y nos pondremos en contacto contigo.
           </p>
           <Form className="max-w-md mx-auto bg-white p-6 rounded-xl shadow py-2 gap-4 justify-center items-center ">
@@ -296,10 +300,10 @@ export default function Home() {
         id="cta"
       >
         <h2 className="text-3xl font-bold mb-4">
-          ¿Listo para vender o beber con Miche Claro?
+          ¿Listo para vender o comer con Sabor Express?
         </h2>
         <p className="mb-6 text-lg">
-          Descárgala gratis y únete a la nueva forma de disfrutar el alcohol con
+          Descárgala gratis y únete a la nueva forma de disfrutar la comida con
           tecnología.
         </p>
         <Button
@@ -314,9 +318,9 @@ export default function Home() {
       <footer className="py-10 px-6 bg-[#f3f1e6] text-gray-600">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
-            <h4 className="font-bold text-lg mb-2">Miche Claro</h4>
+            <h4 className="font-bold text-lg mb-2">Sabor Express</h4>
             <p className="text-sm">
-              Tu app de confianza para vender y comprar alcohol con estilo.
+              Tu app de confianza para vender y comprar comida con estilo.
             </p>
           </div>
           <div>
@@ -349,14 +353,14 @@ export default function Home() {
             <p className="text-sm">¿Dudas o soporte? Escríbenos a:</p>
             <a
               className="underline text-sm mt-1 block"
-              href="mailto:contacto@micheclaro.com"
+              href="mailto:contacto@saborexpress.com"
             >
-              contacto@micheclaro.com
+              contacto@saborexpress.com
             </a>
           </div>
         </div>
         <div className="text-center text-xs text-gray-700 mt-8">
-          © 2025 Miche Claro. Todos los derechos reservados.
+          © 2025 Sabor Express. Todos los derechos reservados.
         </div>
       </footer>
     </div>
