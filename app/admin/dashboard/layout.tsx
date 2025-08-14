@@ -107,7 +107,7 @@ export default function DashboardLayout({
     <div className="min-h-screen flex flex-col sm:flex-row bg-gray-100">
       {/* Mobile top bar */}
       <div className="sm:hidden flex items-center justify-between bg-[#003f63] text-white p-4">
-        <h1 className="text-xl font-bold">Miche Claro</h1>
+        <h1 className="text-xl font-bold">Burguer Express</h1>
         <button
           className="bg-[#003f63]"
           onClick={() => setSidebarOpen(!sidebarOpen)}

@@ -84,7 +84,7 @@ export default function Home() {
             <img
               alt="Sabor Express Logo"
               className="h-14 w-14 shadow-lg shadow-black rounded-full"
-              src="/logo/logo_saborexpress.png"
+              src="/imagen1.png"
             />
             <span className="text-xl font-bold">Sabor Express</span>
           </div>
@@ -207,7 +207,7 @@ export default function Home() {
           <img
             alt="Restaurante usando la app Sabor Express"
             className="mx-auto w-full max-w-[600px] h-[400px] object-cover rounded"
-            src="/restaurantes-beneficio.jpg"
+            src="/burguer2.jpg"
           />
         </div>
       </section>
@@ -225,7 +225,7 @@ export default function Home() {
           <img
             alt="Personas disfrutando de comida pedida por Sabor Express"
             className="mx-auto w-full max-w-[600px] h-[400px] object-cover rounded"
-            src="/comensales-disfrutando.jpg"
+            src="/burguer1.jpg"
           />
         </div>
       </section>

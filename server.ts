@@ -13,7 +13,7 @@ app.prepare().then(() => {
   const server = express();
 
   // Iniciar las tareas programadas
-  iniciarTareasProgramadas(); 
+  // iniciarTareasProgramadas(); 
 
   // Para todas las solicitudes, deja que Next.js las maneje
   server.all("*", (req: Request, res: Response) => {
