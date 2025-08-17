@@ -22,7 +22,7 @@ export default function TerminosYCondicionesPage() {
 
           <div className="space-y-6 text-base leading-relaxed">
             <p>
-              Bienvenido a <strong>Miche Claro</strong>. Antes de utilizar
+              Bienvenido a <strong>Sabor Express</strong>. Antes de utilizar
               nuestros servicios, te pedimos que leas detenidamente los
               siguientes términos y condiciones. Al registrarte o utilizar
               nuestra plataforma, confirmas que has leído, entendido y aceptado
@@ -34,7 +34,7 @@ export default function TerminosYCondicionesPage() {
                 1. Descripción del Servicio
               </h2>
               <p>
-                <strong>Miche Claro</strong>{" "}
+                <strong>Sabor Express</strong>{" "}
                 {
                   'es una plataforma online que actúa como intermediario para conectar a vendedores de mercancía  "Vendedores" con clientes "Consumidores". Nuestro servicio está enfocado principalmente en la comercialización de productos de consumo, incluyendo, pero no limitándose a,'
                 }{" "}
@@ -82,7 +82,7 @@ export default function TerminosYCondicionesPage() {
                 3. Transacciones Financieras
               </h2>
               <p className="font-bold text-red-600">
-                Miche Claro NO procesa, gestiona ni interviene en las
+                Sabor Express NO procesa, gestiona ni interviene en las
                 transacciones financieras directas entre Vendedores y
                 Consumidores.
               </p>
