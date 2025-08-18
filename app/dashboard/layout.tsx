@@ -100,7 +100,7 @@ export default function DashboardLayout({
             : "hidden sm:flex"
         }`}
       >
-        <h1 className="text-2xl font-bold">Miche Claro</h1>
+        <h1 className="text-2xl font-bold">Sabor Express</h1>
         <div className="text-lg mb-4">Menú</div>
         <nav className="flex flex-col gap-4 flex-grow">
           {allMenuItems.map((item, index) => (
